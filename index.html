@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missão Aura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+
+    <header class="topo">
+      <div class="titulo-wrapper">
+        <img src="imagens/logo.png" alt="Endurance" class="logo-titulo">
+        <h1>Missão Aura</h1>
+      </div>
+
+      <p class="subtitulo">
+        O planeta desconhecido está logo à frente. Responda às perguntas e descubra
+        qual perfil da tripulação combina com você.
+      </p>
+    </header>
+
+    <form id="form-perfil" novalidate>
+
+      <section class="card">
+        <h2>1. Identificação do tripulante</h2>
+
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Como devemos te chamar?" autocomplete="name">
+        </div>
+
+        <div class="campo">
+          <label for="nascimento">Data de nascimento</label>
+          <input type="date" id="nascimento" name="nascimento">
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2. Preferências de missão</h2>
+
+        <fieldset class="pergunta">
+          <legend>1. O que mais te motiva a participar desta missão?</legend>
+          <label class="opcao"><input type="radio" name="q1" value="3"><span>Sentar no cockpit e pilotar a nave por mundos inexplorados.</span></label>
+          <label class="opcao"><input type="radio" name="q1" value="5"><span>Liderar a equipe e garantir que todos voltem em segurança.</span></label>
+          <label class="opcao"><input type="radio" name="q1" value="1"><span>Proteger a tripulação de qualquer ameaça que aparecer.</span></label>
+          <label class="opcao"><input type="radio" name="q1" value="2"><span>Analisar as amostras alienígenas que encontraremos.</span></label>
+          <label class="opcao"><input type="radio" name="q1" value="4"><span>Garantir que a nave continue funcionando perfeitamente.</span></label>
+        </fieldset>
+
+        <fieldset class="pergunta">
+          <legend>2. Durante o trajeto, vocês interceptam um sinal de rádio desconhecido. Qual é a sua primeira ação?</legend>
+          <label class="opcao"><input type="radio" name="q2" value="3"><span>Ajusto a rota da nave imediatamente para investigar a origem do sinal.</span></label>
+          <label class="opcao"><input type="radio" name="q2" value="1"><span>Preparo as defesas e fico de prontidão caso seja uma emboscada.</span></label>
+          <label class="opcao"><input type="radio" name="q2" value="5"><span>Convo a equipe para uma reunião rápida e decidimos juntos se vale a pena arriscar.</span></label>
+          <label class="opcao"><input type="radio" name="q2" value="4"><span>Tento triangular a frequência do sinal usando os equipamentos da nave.</span></label>
+          <label class="opcao"><input type="radio" name="q2" value="2"><span>Gravo e analiso o áudio em busca de padrões biológicos ou linguísticos.</span></label>
+        </fieldset>
+
+        <fieldset class="pergunta">
+          <legend>3. Quando um monstro alienígena surge do escuro, qual é a sua reação?</legend>
+          <label class="opcao"><input type="radio" name="q3" value="2"><span>Observar o comportamento dele para entender como a criatura funciona.</span></label>
+          <label class="opcao"><input type="radio" name="q3" value="5"><span>Gritar ordens claras para a equipe se posicionar.</span></label>
+          <label class="opcao"><input type="radio" name="q3" value="1"><span>Sacar a arma e avançar para cima dele primeiro.</span></label>
+          <label class="opcao"><input type="radio" name="q3" value="3"><span>Correr para a nave e preparar os motores para decolagem.</span></label>
+          <label class="opcao"><input type="radio" name="q3" value="4"><span>Verificar se o ataque danificou algum sistema vital da nave.</span></label>
+        </fieldset>
+
+        <fieldset class="pergunta">
+          <legend>4. Quando o sinal de silêncio é acionado e vocês têm 2 horas de folga na nave, onde é mais provável te encontrar?</legend>
+          <label class="opcao"><input type="radio" name="q4" value="4"><span>Desmontando e remontando algum aparelho antigo só pela diversão de ver as engrenagens.</span></label>
+          <label class="opcao"><input type="radio" name="q4" value="2"><span>Perdido em documentários sobre a fauna local ou lendo relatórios de pesquisa.</span></label>
+          <label class="opcao"><input type="radio" name="q4" value="5"><span>Estudando os mapas da missão ou organizando a escala de trabalho da equipe para os próximos dias.</span></label>
+          <label class="opcao"><input type="radio" name="q4" value="3"><span>No simulador de voo, tentando quebrar o recorde de manobras radicais.</span></label>
+          <label class="opcao"><input type="radio" name="q4" value="1"><span>Treinando combate corpo a corpo ou testando o peso de novas armas no simulador.</span></label>
+        </fieldset>
+
+        <fieldset class="pergunta">
+          <legend>5. Qual é o seu lema na tripulação?</legend>
+          <label class="opcao"><input type="radio" name="q5" value="1"><span>"Enquanto eu estiver de pé, nenhum perigo vai te atingir."</span></label>
+          <label class="opcao"><input type="radio" name="q5" value="2"><span>"O conhecimento é a nossa arma mais poderosa."</span></label>
+          <label class="opcao"><input type="radio" name="q5" value="5"><span>"Planejamento impecável é a chave para a sobrevivência."</span></label>
+          <label class="opcao"><input type="radio" name="q5" value="3"><span>"Se tem motor, eu faço voar."</span></label>
+          <label class="opcao"><input type="radio" name="q5" value="4"><span>"Se quebrou, eu conserto."</span></label>
+        </fieldset>
+      </section>
+
+      <button type="submit" class="btn-principal">Descobrir meu perfil</button>
+    </form>
+
+    <section id="tela-empate" class="resultado escondido" aria-live="polite">
+      
+      <img src="imagens/logo.png" alt="Endurance Space Exploration" class="logo-interno">
+      
+      <h2 class="alerta-titulo">⚠️ ALERTA DO COMANDO</h2>
+      
+      <div class="info" style="border-color: var(--cyan); background: rgba(0, 255, 255, 0.05);">
+        <p id="empate-mensagem" style="font-size: 1.1rem; color: #fff;"></p>
+      </div>
+
+      <div id="botoes-empate" class="grid-empate"></div>
+    </section>
+
+    <section id="resultado" class="resultado escondido" aria-live="polite">
+      
+      <img src="imagens/logo.png" alt="Endurance Space Exploration" class="logo-interno">
+
+      <div class="avatar">
+        <img id="perfil-img" src="" alt="Retrato do perfil identificado">
+      </div>
+
+      <p class="participante" id="participante"></p>
+      <h2 class="perfil-nome" id="perfil-nome"></h2>
+      <p class="categoria" id="perfil-categoria"></p>
+
+      <div class="info">
+        <h3>Descrição do perfil</h3>
+        <p id="perfil-descricao"></p>
+      </div>
+
+      <div class="info">
+        <h3>Recomendação para a missão</h3>
+        <p id="perfil-recomendacao"></p>
+      </div>
+
+      <button type="button" id="btn-refazer" class="btn-refazer">-Refaça-</button>
+    </section>
+
+    <div id="modal-erro" class="modal-overlay escondido">
+      <div class="modal-conteudo">
+        <h2 class="modal-titulo">⚠️ AVISO DO COMANDO</h2>
+        <p id="texto-erro" class="modal-texto"></p>
+        <button type="button" id="btn-fechar-erro" class="btn-principal" style="margin-top: 15px;">ENTENDI</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
